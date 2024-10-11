@@ -2,6 +2,7 @@ package com.example.mongorelations.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.ReadOnlyProperty;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 import java.util.*;
@@ -13,6 +14,7 @@ public class Author {
     private String name;
 
     @DocumentReference(lazy = true)
+    @Indexed(unique = true)
     private Address address;
 
     @ReadOnlyProperty

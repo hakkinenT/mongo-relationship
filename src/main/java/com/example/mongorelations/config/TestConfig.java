@@ -96,5 +96,14 @@ public class TestConfig {
             System.out.println("Endereço: " + at.getAddress().getStreet());
         }
 
+        // One-to-One: Tentativa de inserir o mesmo endereço pra autor diferente
+        // Erro de chave duplicada
+        
+        /*Address address3 = addressRepository.findByStreet("Minha rua 2");
+        Author author3 = new Author();
+        author3.setName("Author 3");
+        author3.setAddress(address3);
+        author3 = authorRepository.insert(author3);*/
+
     }
 }
