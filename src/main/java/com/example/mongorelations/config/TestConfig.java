@@ -34,7 +34,7 @@ public class TestConfig {
 
     @PostConstruct
     public void init(){
-        publisherRepository.deleteAll();
+        /*publisherRepository.deleteAll();
         bookRepository.deleteAll();
         addressRepository.deleteAll();
         authorRepository.deleteAll();
@@ -81,20 +81,20 @@ public class TestConfig {
         book2.getAuthors().add(author);
 
         book = bookRepository.insert(book);
-        book2 = bookRepository.insert(book2);
+        book2 = bookRepository.insert(book2);*/
 
         /*publisher.getBooks().add(book);
         publisher.getBooks().add(book2);
         publisherRepository.save(publisher);*/
 
 
-        book = bookRepository.findByTitle("Book 1");
+        /*book = bookRepository.findByTitle("Book 1");
         System.out.println("Titulo: " + book.getTitle());
         System.out.println("Publisher: " + book.getPublisher().getName());
         for(Author at : book.getAuthors()){
             System.out.println("Nome do autor: " + at.getName());
             System.out.println("Endereço: " + at.getAddress().getStreet());
-        }
+        }*/
 
         // One-to-One: Tentativa de inserir o mesmo endereço pra autor diferente
         // Erro de chave duplicada
